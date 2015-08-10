@@ -22,7 +22,6 @@ public class CreateGroup implements Watcher {
         connectedSignal.await();
     }
 
-    @Override
     public void process(WatchedEvent event) { // Watcher interface
         if (event.getState() == KeeperState.SyncConnected) {
             connectedSignal.countDown();
@@ -44,7 +43,7 @@ public class CreateGroup implements Watcher {
     public static void main(String[] args) throws Exception {
         CreateGroup createGroup = new CreateGroup();
         createGroup.connect("localhost");
-        createGroup.create("testNode");
+        createGroup.create("Group");
         createGroup.close();
     }
 }
