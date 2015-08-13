@@ -11,6 +11,7 @@
     <modules>
         <module>ZooKeeper</module>
         <module>websocket</module>
+        <module>rest</module>
     </modules>
 
 
